@@ -16,7 +16,7 @@ const (
 func CreateToken(userName string, password string, id int) string {
 	// Declare the expiration time of the token
 	// here, we have kept it as 5 minutes
-	expirationTime := time.Now().Add(15 * time.Second)
+	expirationTime := time.Now().Add(15 * time.Minute)
 
 	// Create the Claims
 	claims := st.UserAuthClaim{
